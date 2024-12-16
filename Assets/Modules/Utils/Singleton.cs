@@ -18,16 +18,16 @@ namespace UtilsModule
         /// <inheritdoc cref="Awake" />
         private void Awake()
         {
-            // Keep only one
-            if (Instance != null)
-            {
-                if (!CanCoexist)
-                {
-                    Debug.LogWarning($"Another instance of {this.GetType().Name} has been found.");
-                    Destroy(this.gameObject);
-                }
-                return;
-            }
+            //// Keep only one
+            //if (Instance != null)
+            //{
+            //    if (!CanCoexist)
+            //    {
+            //        Debug.LogWarning($"Another instance of {this.GetType().Name} has been found.");
+            //        Destroy(this.gameObject);
+            //    }
+            //    return;
+            //}
 
             Instance = this.gameObject.GetComponent<T>();
 
